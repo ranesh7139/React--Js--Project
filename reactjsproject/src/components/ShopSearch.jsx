@@ -34,7 +34,7 @@ export default function ShopSearch() {
             </div>
         </div>
         <div className='maindiscount'>
-            {filtered.length===0 && search?( <h1 className='bigdiscount'>Product Not Found</h1>):
+            {filtered.length===0 && search?( <h1 className='bigdiscount'></h1>):
             (   <div className='dicount'>
                 {filtered.map((item) => {
                     return (
