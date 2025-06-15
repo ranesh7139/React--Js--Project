@@ -1,0 +1,74 @@
+
+.maindiscount{
+    background-color: #f6f8fc;
+    padding: 40px 150px;
+    margin-bottom: 50px;
+}
+
+.bigdiscount{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+.dicount{
+    display: grid;
+    gap: 40px;
+    border: none;
+    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  
+}
+.newarrival {
+    width: 300px;
+    height: 280px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.discountcard{
+    background:#fff;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+.discountcard:hover{
+    transform: translateY(-5px);
+}
+.discount-round{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-weight: bold;
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+.discount-details h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price{
+    margin-right: 150px;
+    font-weight: bold;
+}
+.productname h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.productname{
+    margin-top: -50px;
+    padding-bottom: 40px;
+}
+.price-details{
+    padding-bottom: 50px;
+}
+
+  

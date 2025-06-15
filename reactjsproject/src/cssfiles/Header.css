@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    align-items: center;
+    /* margin-left: 100px; */
+    box-shadow: 0 3px 12px rgb(71, 70, 70);
+    padding: 20px;
+}
+.firstmain{
+     display: flex;
+     align-items: center;
+     padding-left: 120px;
+     gap: 10px;
+     font-size: 28px;
+     font-weight: bold;
+}
+.navitems{
+    display: flex;
+    align-items: center;
+    padding-left: 700px;
+    gap: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.profile{
+    font-size: 30px;
+}
+.carticon{
+    position: relative;
+
+}
+.carticon li{
+    cursor: pointer;
+    font-size: 25px;
+}
+.carticon span{
+    position: absolute;
+    background-color: rgb(3, 3, 127);
+    border-radius: 50%;
+    font-size: 13px;
+    padding: 2px 7px;
+    color: white;
+    top: -18px;
+    right: -7px;
+}

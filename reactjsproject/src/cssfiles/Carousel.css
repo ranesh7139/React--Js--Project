@@ -1,0 +1,29 @@
+.carouselmain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px ;
+    gap: 60px;  
+}
+.visit-btn{
+    border: 2px solid gray ;
+    padding: 7px;
+    border-radius: 5px;
+}
+.carouselwrap{
+    width: 100%;
+    overflow:hidden ;
+}
+.carousel h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+.carousel p{
+    font-size: 20px;
+}
+.carouselimg {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: -350px;
+}

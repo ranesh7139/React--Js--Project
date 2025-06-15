@@ -1,0 +1,77 @@
+.bannertitle{
+  background-image: url("../Images/table.jpg");
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background-blend-mode: darken;
+  background-color: rgb(136, 132, 132);
+}
+.bannertitle h1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 75px;
+}
+.banner-info{
+    display: flex;
+    gap:100px ;
+    padding: 50px;
+}
+.productname h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+.productname{
+    padding-top: 40px;
+}
+.product-image{
+    margin-top: -50px !important;
+}
+.product-image img{
+    height: 500px;
+    width: 100%;
+}
+.product-rating{
+    display: flex;
+    gap: 30px;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.product-category{
+    display: flex;
+    gap: 80px;
+    padding-top: 20px;
+    
+}
+.prouct-price{
+    font-weight: bold;
+}
+.short-decription{
+    padding-top: 20px;
+}
+.product-input{
+    border: 1px solid gray;
+    height: 30px;
+    width: 80px;
+}
+.addtocartbutton{
+    border:  2px solid black;
+    border-radius: 5px;
+    background-color: rgb(45, 35, 98);
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+   
+}

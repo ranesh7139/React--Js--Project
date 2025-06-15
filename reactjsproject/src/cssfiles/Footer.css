@@ -1,0 +1,37 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: rgb(49, 60, 187);
+    color: white;
+
+}
+.marthead{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.abouthead{
+    font-size: 30px;
+    font-weight: bold;
+}
+.aboutfoot li,
+.customer li,
+.contact li{
+    list-style: none;
+    font-size: 20px;
+}
+.martfoot{
+    font-size: 20px;
+}
+.customerhead{
+    font-size: 30px;
+    font-weight: bold;
+}
+.contacthead{
+    font-size: 30px;
+    font-weight: bold;
+}

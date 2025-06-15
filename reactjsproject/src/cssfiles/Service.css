@@ -1,0 +1,33 @@
+.main-service{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px;
+}
+.single-service{
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.single-service:hover{
+    transform: translateY(-20px);
+   
+}
+.selid {
+    font-size: 40px;
+    padding: 0 10px;
+
+}
+.borderhalf button{
+    border-radius: 50%;
+    background-color: white;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+.Servicedata h2, p{
+    font-size: 20px;
+}
