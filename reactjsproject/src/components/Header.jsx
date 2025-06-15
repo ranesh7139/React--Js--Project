@@ -18,7 +18,10 @@ export default function Header() {
                 <Link to="/">
                   <li>Home</li>
                 </Link>
+                <Link to="/shop-page">
                 <li>Shop</li>
+                </Link>
+
                 <li>Cart</li>
                 <div className='profile'>
                 <li ><CgProfile /></li>
