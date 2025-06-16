@@ -73,5 +73,9 @@
     align-items: center;
     font-weight: bold;
     color: white;
+    
    
+}
+.addtocartbutton{
+    cursor: pointer;
 }
