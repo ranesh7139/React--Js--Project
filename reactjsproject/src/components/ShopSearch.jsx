@@ -28,13 +28,13 @@ export default function ShopSearch() {
                   ))} 
                 </select>
                 <div className='searchbar'>
-                    <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} />
+                    <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} placeholder='Search...' />
                     <span className='searchicon'><FaSearch /></span>
                 </div>
             </div>
         </div>
         <div className='maindiscount'>
-            {filtered.length===0 && search?( <h1 className='bigdiscount'></h1>):
+            {filtered.length===0 && search?( <h1 className='bigdiscount'>Product Not Found</h1>):
             (   <div className='dicount'>
                 {filtered.map((item) => {
                     return (

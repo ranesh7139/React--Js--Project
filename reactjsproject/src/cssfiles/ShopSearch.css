@@ -1,5 +1,5 @@
 .searchbar-container{
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
@@ -10,10 +10,37 @@
     padding: 10px 16px;
     background-color: rgb(67, 67, 237);
     color: white;
-    font-size: 10px;
+    font-size: 20px;
     font-weight: bold;
     border-radius: 5px;
 }
-.dropdown-btn option{
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 350px; /* optional, adds space between dropdown and search */
+}
+
+.searchbar{
+    position: relative;
+
+}
+.searchbar input{
+    padding: 10px 15px;
+    padding-right: 35px;
+    border: none;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    width: 600px;
+    font-size: 20px;
+    outline: none;
     
+}
+.searchicon{
+    position: absolute;
+    top: 10%;
+    right: 12px;
+    transform: translate(-50%);
+    color: #888;
+    font-size: 20px;
+    margin-top: -10px;
 }
