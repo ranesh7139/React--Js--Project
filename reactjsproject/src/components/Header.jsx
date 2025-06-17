@@ -3,8 +3,15 @@ import { IoBag } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link} from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import "../cssfiles/Header.css"
+
+
+
 export default function Header() {
+const cartItems=useSelector((state)=>state.cartItems.cart)
+const uniquecount=cartItems.length  
   return (
     <div className='main' >
         <div className='firstmain'>
@@ -22,13 +29,17 @@ export default function Header() {
                 <li>Shop</li>
                 </Link>
 
-                <li>Cart</li>
+                <Link to="/cart">
+                  <li>Cart</li>
+                </Link>
                 <div className='profile'>
                 <li ><CgProfile /></li>
                 </div>
                 <div className='carticon'>
-                <li><FaShoppingCart /></li>
-                <span>0</span>   
+                <Link to="/cart">
+                  <li><FaShoppingCart /></li>
+                </Link>
+                <span>{uniquecount}</span>   
                 </div>
                 
             </ul>

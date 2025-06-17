@@ -4,6 +4,9 @@ import { FaSearch } from "react-icons/fa"
 import { FaPlus } from "react-icons/fa"
 import { Link } from 'react-router-dom'
 import "../cssfiles/ShopSearch.css"
+import { useDispatch } from 'react-redux'
+import { Addtocard } from '../Reduxtoolkit/Slice'
+import { toast } from 'react-toastify'
 export default function ShopSearch() {
     const {data}=useContext(globalContext)
     const [select,setSelect]=useState("Filter By Category")
@@ -17,6 +20,7 @@ export default function ShopSearch() {
         setSelect(e.target.value)
     }
     const unique=[...new Set(data.map((item)=>item.category))]
+    const dispatch=useDispatch()
   return (
     <div >
         <div className='searchbar-container'>
@@ -50,7 +54,7 @@ export default function ShopSearch() {
                             <br />
                             <div className='price-details'>
                                 <span className='price'>${item.price}</span>
-                                <button className='addbuton'><FaPlus /></button>
+                                <button className='addbuton'onClick={()=>{dispatch(Addtocard({...item,quantity:1}));toast.success("Your Cart is add successfully")}}><FaPlus /></button>
                             </div>
                         </div>
                     )

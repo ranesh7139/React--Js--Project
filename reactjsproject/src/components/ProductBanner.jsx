@@ -3,17 +3,28 @@ import { useParams } from 'react-router-dom'
 import { globalContext } from '../Context/Mycontext'
 import { useEffect } from 'react'
 import "../cssfiles/ProductBanner.css"
+import { useDispatch } from 'react-redux'
+import { Addtocard } from '../Reduxtoolkit/Slice'
+import { toast } from 'react-toastify'
 
 export default function ProductBanner() {
     const { id } = useParams()
     const { discountData, data } = useContext(globalContext)
     const [banner, setBanner] = useState(null)
+    const dispatch=useDispatch()
+
+      const[quantity,setQuantity]=useState(1)
     const specialProduct = discountData.find((item) => item.id === id) ||
         data.find((item) => item.id === id)
     useEffect(() => {
         setBanner(specialProduct)
     }, [id])
     if (!banner) return <p>Loading</p>
+    const handleaddtocart=()=>{
+        const productwithquantity={...banner,quantity:parseInt(quantity) || 1}
+        dispatch(Addtocard(productwithquantity));toast.success(`Added${quantity}Item to cart `)
+    }
+  
     return (
         <div className='main-banner'>
             <div className='bannertitle'>
@@ -35,10 +46,10 @@ export default function ProductBanner() {
                     </div>
                     <p className='short-decription'>{banner.shortDesc}</p>
                     <br />
-                    <input type="number" placeholder='1' className='product-input' />
+                    <input type="number" min="1" value={quantity} onChange={(e)=>setQuantity(Number(e.target.value))} placeholder='1' className='product-input' />
                     <br /> <br /> <br />
                     <div className='addtocartbutton'>
-                    <button>Add to card</button>
+                    <button onClick={handleaddtocart} >Add to card</button>
                     </div>
                 </div>
             </div>

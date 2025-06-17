@@ -70,5 +70,10 @@
 .price-details{
     padding-bottom: 50px;
 }
-
+.addbuton:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: rgb(167, 161, 161);
+}
   

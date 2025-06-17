@@ -4,8 +4,12 @@ import { globalContext } from '../Context/Mycontext'
 import { FaPlus } from "react-icons/fa"
 import "../cssfiles/Bigdiscount.css"
 import { Link} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import { Addtocard } from '../Reduxtoolkit/Slice'
 export default function Bigdiscount() {
     const { discountData } = useContext(globalContext)
+    const dispatch=useDispatch()
     return (
         <div className='maindiscount'>
             <h1 className='bigdiscount'>Big Discount</h1>
@@ -25,7 +29,7 @@ export default function Bigdiscount() {
                             <br />
                             <div className='price-details'>
                                 <span className='price'>${item.price}</span>
-                                <button className='addbuton'><FaPlus /></button>
+                                <button className='addbuton' onClick={()=>{dispatch(Addtocard({...item,quantity:1}));toast.success("Your Cart is add successfully")}}><FaPlus /></button>
                             </div>
                         </div>
                     )

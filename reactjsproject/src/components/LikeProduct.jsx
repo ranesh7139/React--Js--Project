@@ -7,6 +7,9 @@ import { globalContext } from '../Context/Mycontext'
 import { FaAlignLeft, FaPlus } from "react-icons/fa"
 import '../cssfiles/Bigdiscount.css'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { Addtocard } from '../Reduxtoolkit/Slice'
+import { toast } from 'react-toastify'
 export default function LikeProduct() {
     const { id } = useParams()
     const { discountData, data } = useContext(globalContext)
@@ -22,6 +25,7 @@ export default function LikeProduct() {
         return(item.category===specialProduct.category && item.id !==specialProduct.id)
     })
     if (!banner) return <p></p>
+    const dispatch=useDispatch()
   return (
     <div className='maindiscount'>
             <h1 className='bigdiscount' style={{marginRight:"800px"}}>You might also like</h1>
@@ -39,7 +43,7 @@ export default function LikeProduct() {
                             <br />
                             <div className='price-details'>
                                 <span className='price'>${item.price}</span>
-                                <button className='addbuton'><FaPlus /></button>
+                                <button className='addbuton'onClick={()=>{dispatch(Addtocard({...item,quantity:1}));toast.success("Your Cart is add successfully")}}><FaPlus /></button>
                             </div>
                         </div>
                     )

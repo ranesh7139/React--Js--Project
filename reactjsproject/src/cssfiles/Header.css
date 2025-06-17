@@ -4,6 +4,14 @@
     /* margin-left: 100px; */
     box-shadow: 0 3px 12px rgb(71, 70, 70);
     padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    width: 100%;
+    background-color: white;
+    
 }
 .firstmain{
      display: flex;
