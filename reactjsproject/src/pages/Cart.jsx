@@ -19,7 +19,7 @@ const items = useSelector(state => state.cartItems.cart)
            </div>
 
           <div className="cart-summary">
-            <h3></h3>
+            <h3>Cart Summary</h3>
             <hr />
             <p>Total Price :</p>
             <h2>${totalPrice.toFixed(2)}</h2>
