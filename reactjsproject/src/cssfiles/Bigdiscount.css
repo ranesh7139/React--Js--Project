@@ -72,7 +72,7 @@
 }
 .addbuton:hover{
     cursor: pointer;
-    border-radius: 10%;
+    border-radius: 50%;
     padding: 10px;
     background-color: rgb(167, 161, 161);
 }

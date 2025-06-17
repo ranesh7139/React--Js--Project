@@ -11,9 +11,20 @@ const items = useSelector(state => state.cartItems.cart)
   return (
      <div className="cart-page">
       {items.length === 0 ? (
-        <div className="empty-cart-message">
-          <h2>Your Cart Is Empty</h2>
-        </div>
+         <div className=" container px-4 gap-3  flex items-center py-8 border-gray-50 border-2 rounded-lg">
+         <div className=" w-235 h-50 bg-white">
+             <h1 className="font-bold p-4 text-2xl text-gray-700 ">
+               No items are add in cart
+             </h1>
+           </div>
+
+          <div className="cart-summary">
+            <h3>Cart Summary</h3>
+            <hr />
+            <p>Total Price :</p>
+            <h2>${totalPrice.toFixed(2)}</h2>
+          </div>
+        </div> 
       ) : (
         <div className="cart-content">
           <div className="cart-items">
@@ -22,7 +33,7 @@ const items = useSelector(state => state.cartItems.cart)
                 <img src={item.imgUrl} alt={item.productName} className="product-img" />
                 <div className="item-details">
                   <h3>{item.productName}</h3>
-                  <div className='amount'>
+                  <div className='amount-details'>
                   <p>${item.price.toFixed(2)} X {item.quantity}</p>
                   <h4>${(item.price * item.quantity).toFixed(2)}</h4>
                   </div>
@@ -37,7 +48,6 @@ const items = useSelector(state => state.cartItems.cart)
               </div>
             ))}
           </div>
-
           <div className="cart-summary">
             <h3>Cart Summary</h3>
             <hr />
