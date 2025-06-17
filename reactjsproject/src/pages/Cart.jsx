@@ -13,7 +13,7 @@ const items = useSelector(state => state.cartItems.cart)
       {items.length === 0 ? (
          <div className=" container px-4 gap-3  flex items-center py-8 border-gray-50 border-2 rounded-lg">
          <div className=" w-235 h-50 bg-white">
-             <h1 className="font-bold p-4 text-2xl text-gray-700 ">
+             <h1 className="font-bold p-4 text-2xl text-gray-900 ">
                No items are add in cart
              </h1>
            </div>
